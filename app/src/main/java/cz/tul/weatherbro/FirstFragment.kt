@@ -33,12 +33,22 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            setData()
+
+        //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun setData(){
+        val builder = StringBuilder()
+        builder.append("Jmeno: ", binding.name.text, "\n")
+        builder.append("Příjmení: ", binding.surname.text, "\n")
+        builder.append("email: ", binding.email.text, "\n")
+        binding.textviewFirst.text = builder.toString()
     }
 }

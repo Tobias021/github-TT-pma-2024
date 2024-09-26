@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="contant_form_padding_r">40dp</dimen>
+    <dimen name="contant_form_padding_l">2dp</dimen>
 </resources>
